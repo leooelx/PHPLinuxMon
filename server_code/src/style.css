@@ -1,0 +1,31 @@
+html {
+font-family: sans-serif;
+}
+
+table {
+width: 600px;
+border-collapse: collapse;
+border: 1px solid black;
+border-top: 3px solid black;
+border-bottom: 3px solid black;
+}
+
+th,td {
+padding: 10px;
+}
+
+td {
+text-align: center;
+}
+
+th[scope="col"] {
+background: #ccc;
+}
+
+tr:nth-child(even) {
+background: #eee;
+}
+
+tr:nth-child(odd) {
+background: #ddd;
+}

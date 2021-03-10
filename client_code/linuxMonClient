@@ -1,0 +1,10 @@
+#!/bin/bash
+while :
+do
+cat <(grep 'cpu ' /proc/stat) <(sleep 1 && grep 'cpu ' /proc/stat) | awk -v RS="" '{print ($13-$2+$15-$4)*100/($13-$2+$15-$4+$16-$5) "%"}'  > /mon/cpu
+free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }' > /mon/ram
+who | awk '{print $1 "=" $2}' > /mon/users
+ps aux | awk '{print $11 $12}' | sed 's/COMMAND//g' | sed 's/ //g' > /mon/procs
+sleep 5
+done
+
