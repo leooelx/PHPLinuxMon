@@ -1,4 +1,4 @@
-Simple service that's works simplely with PHP and MariaDB.
+Simple service that's works simplely with PHP and MariaDB..
 
 Needs only the service listening on "localhost".
 
