@@ -12,6 +12,7 @@
     <h1>HOSTS</h1>
       <div align="center">
         <table>
+	  <caption>Table principal</caption>
           <tr>
             <th scope="col">HostName</th>
             <th scope="col">IP</th>
